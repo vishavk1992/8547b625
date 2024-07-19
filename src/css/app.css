@@ -1,0 +1,79 @@
+#app {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#app .container {
+  width: 376px;
+  height: 666px;
+  z-index: 1000;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .9);
+  padding: 0;
+}
+
+.container-view {
+  padding: 10px 12px;
+  height: 500px;
+  overflow-y: scroll;
+}
+.container-view{
+  /* padding: 20px; */
+  scroll-behavior: auto;
+  overflow-y: scroll;
+  height: 555px; 
+}
+/* For WebKit-based browsers */
+.container-view::-webkit-scrollbar {
+width: 3px; /* Adjust this value as needed */
+}
+
+.container-view::-webkit-scrollbar-thumb {
+background: #888; /* You can also style the scrollbar thumb */
+border-radius: 10px; /* Optional: for rounded scrollbar thumb */
+height: 15px;
+}
+
+.container-view::-webkit-scrollbar-thumb:hover {
+background: #555; /* Optional: color change on hover */
+}
+
+/* 
+/////////////////////////Activity Feed //////////////////// */
+.call-icon {
+  font-size: 16px;
+}
+.tab {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.tab.active {
+  border-bottom: 2px solid #007bff;
+}
+
+/* ///////////////////////////footer.//////////////////// */
+.row-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.no-underline {
+  text-decoration: none;
+  color:rgb(4, 4, 32);
+}
+
+.call-icon{
+  padding-right: 7px;
+}
+.footer{
+  padding:8px;
+}

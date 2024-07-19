@@ -1,0 +1,17 @@
+
+.tab {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+.active {
+  border-bottom: 2px solid #007bff;
+}
+.navbar-svg svg{
+  padding-top: 10px;
+  text-align: center;
+
+}
+.nav-link{
+  font-size: 17px !important;
+}
