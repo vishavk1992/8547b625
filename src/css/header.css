@@ -1,3 +1,14 @@
+header {
+  height: 30px;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar svg {
+ padding-top:11px;
+}
 
 .tab {
   cursor: pointer;
@@ -7,11 +18,42 @@
 .active {
   border-bottom: 2px solid #007bff;
 }
-.navbar-svg svg{
-  padding-top: 10px;
-  text-align: center;
-
+.no-underline {
+  text-decoration: none;
 }
-.nav-link{
-  font-size: 17px !important;
+.dropdown-menu{
+  height: 80px !important;
+  position: absolute !important;
+  margin-left:-72px !important;
+}
+.navbar-nav li{
+  padding: 0 4px !important;
+}
+@media  screen and (max-width:992px) {
+  .navbar-collapse{
+    flex-basis:0% !important;
+    flex-grow: 1;
+    display: flex !important;
+    
+  }
+  .navbar-toggler-icon{
+    display: none !important;
+  }
+  .navbar-nav{
+    display: flex !important;
+    flex-direction: row !important;
+    padding:0 5px !important;
+  }
+  .navbar-nav li{
+    padding: 0 12px !important;
+  }
+  .dropdown-menu{
+    width:20%;
+    height: 80px !important;
+    position: absolute !important;
+    margin-left:-84px !important;
+  }
+  .dropdown-item{
+    padding: 8px 8px 0px 10px !important;
+  }
 }

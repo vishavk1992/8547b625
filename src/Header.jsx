@@ -4,24 +4,24 @@ import "./css/header.css"; // Optional, for additional custom styles
 
 const Header = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("/"); // Initialize active tab
+  const [activeTab, setActiveTab] = useState("inbox"); // Default active tab
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  const handleLinkClick = (path) => {
-    setActiveTab(path);
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" href="#">
+      <Link className="navbar-brand" to="#">
         <div className="d-flex align-items-center justify-content-center navbar-svg">
           <svg
             width="60px"
-            height="50px"
-            viewBox="0 0 200 250"
+            height="40px"
+            viewBox="0 0 250 250"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             style={{ margin: 0 }} // Remove margin to eliminate gap
@@ -36,44 +36,31 @@ const Header = () => {
           <span>Activity</span>
         </div>
       </Link>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNavDropdown">
+
+      <div className=" navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
-          <li className={`nav-item ${activeTab === "/" ? "active" : ""}`}>
+          <li className={`nav-item ${activeTab === "inbox" ? "active" : ""}`}>
             <Link
               to="/"
               className="nav-link"
-              onClick={() => handleLinkClick("/")}
+              onClick={() => handleTabClick("inbox")}
             >
               Inbox <span className="sr-only"></span>
             </Link>
           </li>
           <li
-            className={`nav-item ${activeTab === "/call-log" ? "active" : ""}`}
+            className={`nav-item ${activeTab === "All Calls" ? "active" : ""}`}
           >
             <Link
               to="/call-log"
               className="nav-link"
-              onClick={() => handleLinkClick("/call-log")}
+              onClick={() => handleTabClick("All Calls")}
             >
               All Calls
             </Link>
           </li>
-          <li
-            className={`nav-item dropdown ${
-              activeTab.startsWith("/more") ? "active" : ""
-            }`}
-          >
+
+          <li className="nav-item dropdown">
             <Link
               className={`nav-link dropdown-toggle ${
                 isDropdownOpen ? "show" : ""
@@ -93,19 +80,15 @@ const Header = () => {
             >
               <Link
                 to="/archived"
-                className={`dropdown-item ${
-                  activeTab === "/archived" ? "active" : ""
-                }`}
-                onClick={() => handleLinkClick("/archived")}
+                className="dropdown-item"
+                onClick={() => handleTabClick("Archived Calls")}
               >
                 Archived Calls
               </Link>
               <Link
                 to="/another-action"
-                className={`dropdown-item ${
-                  activeTab === "/another-action" ? "active" : ""
-                }`}
-                onClick={() => handleLinkClick("/another-action")}
+                className="dropdown-item"
+                onClick={() => handleTabClick("Settings")}
               >
                 Settings
               </Link>
