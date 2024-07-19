@@ -1,3 +1,14 @@
+## Deploy on NETLIFY 
+Link :  https://aircall-new-app.netlify.app/
+
+## Video recording for reference :
+
+
+https://github.com/user-attachments/assets/b3d3bb28-4698-4ada-aac4-2374e78629bb
+
+
+
+
 ## Summary
 
 The goal of this test is to make you code a small ReactJS app. We have prepared a skeleton app for you, but feel free to change anything (CSS files, HTML structure, JS structure, etc) to suit your needs.
