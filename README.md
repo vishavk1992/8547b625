@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/beb49a2c-392e-4599-9a13-c1ef59e06dd4
 
 ## Summary
 
-The goal of this test is to make you code a small ReactJS app. We have prepared a skeleton app for you, but feel free to change anything (CSS files, HTML structure, JS structure, etc) to suit your needs.
+The goal of this test is to make you code a small ReactJS app. We have prepared a skeleton app for you, but feel free to change anything (CSS files, HTML structure, JS structure, etc) to suit your needs..
 
 The app should have the following features:
 - **Activity Feed** - simple list of calls
